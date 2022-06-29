@@ -121,7 +121,7 @@ try:
     templatesPath = sys.argv[1]
     outputFile = sys.argv[2]
 except IndexError:
-    raise SystemExit(f"Usage: {sys.argv[0]} <security_templates_path>, <output_xlsx_path>, OPTIONAL: -n")
+    raise SystemExit(f"Usage: {sys.argv[0]} <security_templates_path> <output_xlsx_path> OPTIONAL: -n")
 
 try:
     if 'n' in sys.argv[3] : skipIds = True
