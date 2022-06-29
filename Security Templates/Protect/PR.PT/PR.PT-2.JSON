@@ -1,0 +1,19 @@
+{
+    "nodes":[
+        {"id": "User", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Policies Storage", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Access Log", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Removable Media", "type": "Data Store", "flags": "", "area": "A1"},
+        {"id": "Check Access Request", "type": "Process", "behavior": "M", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "User", "target": "Check Access Request", "label": "Access Request", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Check Access Request", "target": "Removable Media", "label": "Access Request", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Policies Storage", "target": "Check Access Request", "label": "Access Policy", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Check Access Request", "target": "Access Log", "label": "Request Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Removable Media", "target": "User", "label": "Requested data", "type": "Classified", "flags": "C", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Protected Location", "type":"Trust Area"}
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Account Inventory", "type": "Data Store", "flags": ""},
+        {"id": "User", "type": "Entity", "flags": ""},
+        {"id": "Configurations Log", "type": "Data Store", "flags": ""},
+        {"id": "Apply configuration", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Check Request", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "User", "target": "Check Request", "label": "New Configuration", "type": "Generic", "flags": ""},
+        {"source": "User", "target": "Check Request", "label": "Identity and Credentials", "type": "Generic", "flags": ""},
+        {"source": "Account Inventory", "target": "Check Request", "label":"Identity and Hashed Credentials", "type": "Generic", "flags": ""},
+        {"source": "Check Request", "target": "Apply configuration", "label": "New Configuration", "type": "Generic", "flags": ""},
+        {"source": "Check Request", "target": "Configurations Log", "label": "Request Info", "type": "Metadata", "flags": "CIA"}
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "nodes":[
+        {"id": "Data Subject", "type": "Entity", "flags": "", "area": "A1"},
+        {"id": "Access Data", "type": "Process", "behavior": "J", "flags": "CIA", "area": ""},
+        {"id": "Rectify Data", "type": "Process", "behavior": "F", "flags": "CIA", "area": ""},
+        {"id": "Delete Data", "type": "Process", "behavior": "M", "flags": "C", "area": ""},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA", "area": ""}
+    ],
+    "links":[
+        {"source": "Data Subject", "target": "Access Data", "label": "Request Access", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Data Subject", "target": "Rectify Data", "label": "Rectified Data", "type": "Personal", "flags": "CI", "area": "A1"},
+        {"source": "Data Subject", "target": "Delete Data", "label": "Request Deletion", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Rectify Data", "target": "Data Inventory", "label": "Rectified Data", "type": "Personal", "flags": "CI", "area": ""},
+        {"source": "Data Inventory", "target": "Access Data", "label": "Personal Data", "type": "Personal", "flags": "CI", "area": ""},
+        {"source": "Data Inventory", "target": "Delete Data", "label": "Personal Data", "type": "Personal", "flags": "CI", "area": ""},
+        {"source": "Access Data", "target": "Data Subject", "label": "Personal Data", "type": "Personal", "flags": "CI", "area": "A1"}        
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

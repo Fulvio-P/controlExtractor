@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Environment", "type": "Entity", "flags": ""},
+        {"id": "Organize Risk Management", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Environment", "target": "Organize Risk Management", "label": "Events and Best Practices", "type": "Generic", "flags": ""},
+        {"source": "Organize Risk Management", "target": "Risk Management", "label": "Directives and Policies", "type": "Metadata", "flags": "CIA"},
+        {"source": "Risk Management", "target": "Organize Risk Management", "label": "Security Reports", "type": "Metadata", "flags": "CIA"}
+    ]
+}

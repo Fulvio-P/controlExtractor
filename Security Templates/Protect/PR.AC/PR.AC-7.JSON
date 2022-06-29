@@ -1,0 +1,19 @@
+{
+    "nodes":[
+        {"id": "Account Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Risk Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Assign Authentication Methods", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Account Inventory", "target": "Assign Authentication Methods", "label": "Users", "type": "Generic", "flags": ""},
+        {"source": "Data Inventory", "target": "Assign Authentication Methods", "label": "Data Assets", "type": "Generic", "flags": ""},
+        {"source": "Software Inventory", "target": "Assign Authentication Methods", "label": "Software Assets", "type": "Generic", "flags": ""},
+        {"source": "Hardware Inventory", "target": "Assign Authentication Methods", "label": "Hardware Assets", "type": "Generic", "flags": ""},
+        {"source": "Business Processes Inventory", "target": "Assign Authentication Methods", "label": "Transactions", "type": "Generic", "flags": ""},
+        {"source": "Risk Inventory", "target": "Assign Authentication Methods", "label": "Risk", "type": "Metadata", "flags": "CIA"}
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Open Threat Repositories", "type": "Data Store", "flags": ""},
+        {"id": "Identify Threats", "type": "Process", "behavior": "C", "flags": ""},
+        {"id": "Internal Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "External Threats Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Open Threat Repositories", "target": "Identify Threats", "label": "Threats Info", "type": "Generic", "flags": ""},
+        {"source": "Identify Threats", "target": "Internal Threats Inventory", "label": "Internal Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify Threats", "target": "External Threats Inventory", "label": "External Threats", "type": "Metadata", "flags": "CIA"}
+    ]
+}

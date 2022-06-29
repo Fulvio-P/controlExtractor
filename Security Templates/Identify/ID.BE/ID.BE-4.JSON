@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Critical Services Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Identify Interdependencies", "type": "Process", "behavior": "J", "flags": "C"},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Critical Services Inventory", "target": "Identify Interdependencies", "label": "Security Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Critical Services Inventory", "target": "Identify Interdependencies", "label": "Services Info", "type": "Generic", "flags": ""},
+        {"source": "Business Processes Inventory", "target": "Identify Interdependencies", "label": "Processes", "type": "Generic", "flags": ""},
+        {"source": "Identify Interdependencies", "target": "Risk Management", "label": "Interdependencies", "type": "Metadata", "flags": "CIA"}
+    ]
+}

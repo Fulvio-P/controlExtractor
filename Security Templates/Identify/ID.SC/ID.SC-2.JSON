@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Assign Priority", "type": "Process", "behavior": "F", "flags": ""},
+        {"id": "Partners Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Identify and evaluate", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Assign Priority", "target": "Partners Inventory", "label": "Priority", "type": "Metadata", "flags": "CIA"},
+        {"source": "Partners Inventory", "target": "Identify and evaluate", "label": "Suppliers and Partners", "type": "Generic", "flags": ""},
+        {"source": "Identify and evaluate", "target": "Assign Priority", "label": "Evaluation Info", "type": "Metadata", "flags": "CIA"}
+    ]
+}

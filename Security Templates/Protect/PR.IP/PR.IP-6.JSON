@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Data Store", "type": "Data Store", "flags": ""},
+        {"id": "Destroy Personal Data", "type": "Process", "behavior": "M", "flags": "C"},
+        {"id": "Delete Data", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Destroy Classified Data", "type": "Process", "behavior": "M", "flags": "C"},
+        {"id": "Policies Storage", "type": "Data Store", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Store", "target": "Destroy Personal Data", "label": "Personal Data to Destroy", "type": "Personal", "flags": "CI"},
+        {"source": "Data Store", "target": "Delete Data", "label": "Data to Delete", "type": "Generic", "flags": ""},
+        {"source": "Data Store", "target": "Destroy Classified Data", "label": "Classified Data to Destroy", "type": "Classified", "flags": "C"},
+        {"source": "Policies Storage", "target": "Destroy Personal Data", "label": "Personal Data Destruction", "type": "Generic", "flags": ""},
+        {"source": "Policies Storage", "target": "Delete Data", "label": "Generic Data Deletion", "type": "Generic", "flags": ""},
+        {"source": "Policies Storage", "target": "Destroy Classified Data", "label": "Classified Data Destruction", "type": "Generic", "flags": ""}
+    ]
+}

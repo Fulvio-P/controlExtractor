@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Incident Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Assign Alert Threshold", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Detect Incident", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Incident Response", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Events Inventory", "target": "Assign Alert Threshold", "label": "Security Event", "type": "Metadata", "flags": "CIA"},
+        {"source": "Assign Alert Threshold", "target": "Incident Inventory", "label": "Threshold", "type": "Metadata", "flags": "CIA"},
+        {"source": "Incident Inventory", "target": "Assign Alert Threshold", "label": "Incidents Data", "type": "Metadata", "flags": "CIA"},
+        {"source": "Incident Inventory", "target": "Detect Incident", "label": "Threshold", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Detect Incident", "label": "Detected Event", "type": "Metadata", "flags": "CIA"},
+        {"source": "Detect Incident", "target": "Incident Response", "label": "Incident Alert", "type": "Metadata", "flags": "CIA"}
+    ]
+}

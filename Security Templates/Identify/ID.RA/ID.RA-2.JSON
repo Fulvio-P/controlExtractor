@@ -1,0 +1,27 @@
+{
+    "nodes":[
+        {"id": "Open Source Repositories", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Organize Intelligence", "type": "Process", "flags": "CIA", "area": ""},
+        {"id": "CERT", "type": "Entity", "flags": "", "area": ""},
+        {"id": "CTI Partners", "type": "Entity", "flags": "", "area": ""},
+        {"id": "SOC", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Open Source Repositories", "target": "Organize Intelligence", "label": "Intelligence", "type": "Generic", "flags": "", "area": ""},
+        {"source": "CERT", "target": "Organize Intelligence", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "CTI Partners", "target": "Organize Intelligence", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "SOC", "target": "Organize Intelligence", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "SOC", "target": "CTI Partners", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Organize Intelligence", "target": "Threats Inventory", "label": "Treats", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Organize Intelligence", "target": "Events Inventory", "label": "Events", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Organize Intelligence", "target": "Vulnerability Inventory", "label": "Vulnerabilities", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Organize Intelligence", "target": "Incidents Inventory", "label": "Incidents", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

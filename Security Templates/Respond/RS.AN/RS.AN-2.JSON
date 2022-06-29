@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Resources Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Assign Impact", "type": "Process", "behavior": "J", "flags": ""}
+    ],
+    "links":[
+        {"source": "Incidents Inventory", "target": "Assign Impact", "label": "Incident", "type": "Metadata", "flags": "CIA"},
+        {"source": "Resources Inventory", "target": "Assign Impact", "label": "Resources", "type": "Generic", "flags": ""},
+        {"source": "Business Processes Inventory", "target": "Assign Impact", "label": "Processes", "type": "Generic", "flags": ""},
+        {"source": "Assign Impact", "target": "Incidents Inventory", "label": "Impact", "type": "Metadata", "flags": "CIA"}
+    ]
+}

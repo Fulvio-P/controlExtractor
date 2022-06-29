@@ -1,0 +1,11 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Respond", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Respond", "label": "Incident Alert", "type": "Metadata", "flags": "CIA"},
+        {"source": "Response Plans Inventory", "target": "Respond", "label": "Response Plan", "type": "Metadata", "flags": "CIA"}
+    ]
+}

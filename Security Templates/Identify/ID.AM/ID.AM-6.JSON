@@ -1,0 +1,19 @@
+{
+    "nodes":[
+        {"id": "Role Definitions Inventory", "type": "Data Store", "flags": "", "area":""},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA", "area":""},
+        {"id": "Partners Inventory", "type":"Data Store", "flags": "", "area":""},
+        {"id": "Assign Role", "type": "Process", "behavior": "M", "flags": "", "area":""},
+        {"id": "Third Parties", "type": "Entity", "flags": "", "area":""}
+    ],
+    "links":[
+        {"source": "Human Resources Inventory", "target": "Assign Role", "label": "Human Resources Info", "type": "Personal", "flags": "CI", "area":""},
+        {"source": "Partners Inventory", "target": "Assign Role", "label": "Partners", "type": "Generic", "flags": "", "area":""},
+        {"source": "Role Definitions Inventory", "target": "Assign Role", "label": "Roles", "type": "Generic", "flags": "", "area":""},
+        {"source": "Assign Role", "target": "Human Resources Inventory", "label": "Roles and Responsability", "type": "Metadata", "flags": "CIA", "area":""},
+        {"source": "Assign Role", "target": "Third Parties", "label": "Roles and Responsability", "type": "Metadata", "flags": "CIA", "area":"A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

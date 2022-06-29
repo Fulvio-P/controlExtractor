@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Environment", "type": "Entity", "flags": ""},
+        {"id": "Suppliers Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Clients Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Define Role as Critical Infrastructure", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Environment", "target": "Define Role as Critical Infrastructure", "label": "Environment Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Suppliers Inventory", "target":"Define Role as Critical Infrastructure", "label": "Suppliers Info", "type": "Generic", "flags": ""},
+        {"source": "Clients Inventory", "target": "Define Role as Critical Infrastructure", "label":"Clients Info", "type": "Generic", "flags": ""},
+        {"source": "Define Role as Critical Infrastructure", "target": "Risk Management", "label": "Organization Role", "type": "Metadata", "flags": "CIA"}
+    ]
+}

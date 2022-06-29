@@ -1,0 +1,25 @@
+{
+    "nodes":[
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Extract Intelligence", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Develop Situational Awareness", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Share", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Partners", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Threats Inventory", "target": "Extract Intelligence", "label": "Threats", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Vulnerability Inventory", "target": "Extract Intelligence", "label": "Vulnerability", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Events Inventory", "target": "Extract Intelligence", "label": "Events", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Incidents Inventory", "target": "Extract Intelligence", "label": "Incidents", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Extract Intelligence", "target": "Develop Situational Awareness", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Extract Intelligence", "target": "Share", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Share", "target": "Partners", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Partners", "target": "Develop Situational Awareness", "label": "Intelligence", "type": "Metadata", "flags": "CIA", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

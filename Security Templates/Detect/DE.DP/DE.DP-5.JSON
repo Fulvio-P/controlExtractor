@@ -1,0 +1,10 @@
+{
+    "nodes":[
+        {"id": "Monitoring Process", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Extract Improvements", "type": "Process", "behavior": "F", "flags": ""}
+    ],
+    "links":[
+        {"source": "Monitoring Process", "target": "Extract Improvements", "label": "Operations Report", "type": "Metadata", "flags": "CIA"},
+        {"source": "Extract Improvements", "target": "Monitoring Process", "label": "Modifications", "type": "Metadata", "flags": "CIA"}
+    ]
+}

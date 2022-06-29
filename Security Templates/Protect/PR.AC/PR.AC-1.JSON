@@ -1,0 +1,19 @@
+{
+    "nodes":[
+        {"id": "User", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Register", "type": "Process", "behavior": "F", "flags": "C", "area": "A1"},
+        {"id": "Account Inventory", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Audit Security", "type": "Process", "behavior": "M", "flags": "", "area": ""} 
+    ],
+    "links":[
+        {"source": "User", "target": "Register", "label": "Identity and Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Register", "target": "Account Inventory", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Account Inventory", "target": "Audit Security", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Account Inventory", "target": "Audit Security", "label": "Security Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Audit Security", "target": "Account Inventory", "label": "Update Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Audit Security", "target": "User", "label": "Notify Changes", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

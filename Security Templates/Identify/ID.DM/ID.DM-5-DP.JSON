@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA", "area": "A2"},
+        {"id": "International Transfer", "type": "Process", "behavior": "M", "flags": "CIA", "area": "A2"},
+        {"id": "International Transfer Log",  "type": "Data Store", "flags": "", "area": "A2"},
+        {"id": "Foreign Partners", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "International Transfer", "label": "Data", "type": "Personal", "flags": "CI", "area": "A2"},
+        {"source": "Data Inventory", "target": "International Transfer Log", "label": "Transfer Info", "type": "Metadata", "flags": "CIA", "area": "A2"},
+        {"source": "International Transfer", "target": "Foreign Partners", "label": "Data", "type": "Personal", "flags": "CI", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"},
+        {"id": "A2", "name": "National Borders", "type":"Generic Area"}
+    ]
+}

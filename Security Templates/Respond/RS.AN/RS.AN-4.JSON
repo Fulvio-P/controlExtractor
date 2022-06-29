@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Incidents and Analysis", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Categorize", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Incidents and Analysis", "target": "Categorize", "label": "Incident Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Response Plans Inventory", "target": "Categorize", "label": "Response Plans", "type": "Metadata", "flags": "CIA"},
+        {"source": "Categorize", "target": "Incidents Inventorys", "label": "Incident Category", "type": "Metadata", "flags": "CIA"}
+    ]
+}

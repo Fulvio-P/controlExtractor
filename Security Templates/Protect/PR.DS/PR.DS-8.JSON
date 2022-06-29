@@ -1,0 +1,11 @@
+{
+    "nodes":[
+        {"id": "Hardware Element", "type": "Entity", "flags": ""},
+        {"id": "Verify Integrity", "type": "Process", "behavior": "M", "flags": "A"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"}
+    ],
+    "links":[
+        {"source": "Hardware Element", "target": "Verify Integrity", "label": "Status", "type": "Generic", "flags": ""},
+        {"source": "Verify Integrity", "target": "Hardware Inventory", "label": "Integrity Info", "type": "Metadata", "flags": "CIA"}
+    ]
+}

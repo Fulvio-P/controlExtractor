@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Protection Process", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Partners", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Protection Process", "target": "Partners", "label": "Effectiveness Report", "type": "Metadata", "flags": "CIA", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

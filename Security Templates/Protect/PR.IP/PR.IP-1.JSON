@@ -1,0 +1,21 @@
+{
+    "nodes":[
+        {"id": "Configurations Baselines", "type": "Data Store", "flags": ""},
+        {"id": "Software Baselines", "type": "Data Store", "flags": ""},
+        {"id": "Install New System", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Assign Configuration", "type": "Process", "behavior": "J", "flags": "I"},
+        {"id": "Record in Inventory", "type": "Process", "behavior": "C", "flags": "I"},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"}
+    ],
+    "links":[
+        {"source": "Configurations Baselines", "target": "Assign Configuration", "label": "Standard Configurations", "type": "Generic", "flags": ""},
+        {"source": "Software Baselines", "target":"Assign Configuration", "label": "Standard Software", "type": "Generic", "flags": ""},
+        {"source": "Install New System", "target":"Assign Configuration", "label": "New System", "type": "Generic", "flags": ""},
+        {"source": "Assign Configuration", "target":"Record in Inventory", "label": "New System", "type": "Generic", "flags": ""},
+        {"source": "Record in Inventory", "target":"Data Inventory", "label": "Data Resources", "type": "Generic", "flags": ""},
+        {"source": "Record in Inventory", "target":"Software Inventory", "label": "Software Resources", "type": "Generic", "flags": ""},
+        {"source": "Record in Inventory", "target":"Hardware Inventory", "label": "Hardware Resources", "type": "Generic", "flags": ""}
+    ]
+}

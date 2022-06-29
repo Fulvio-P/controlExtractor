@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Risk Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Compute Risk", "type": "Process", "behavior": "J", "flags": "C"}
+    ],
+    "links":[
+        {"source": "Threats Inventory", "target": "Compute Risk", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Threats Inventory", "target": "Compute Risk", "label": "Impact and Probability", "type": "Metadata", "flags": "CIA"},
+        {"source": "Vulnerability Inventory", "target": "Compute Risk", "label": "Vulnerabilities", "type": "Metadata", "flags": "CIA"},
+        {"source": "Compute Risk", "target": "Risk Inventory", "label": "Risk", "type": "Metadata", "flags": "CIA"}
+    ]
+}

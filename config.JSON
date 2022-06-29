@@ -1,0 +1,17 @@
+{
+    "nodeExist": true,
+    "nodeC": true,
+    "nodeI": true,
+    "nodeA": true,
+    "nodeCIA": false,
+    "flowExist": true,
+    "flowC": true,
+    "flowI": true,
+    "flowA": true,
+    "flowP": true,
+    "flowCIAP": false,
+    "areaExist": true,
+    "areaTrust": true,
+    "areaFlowsEnter": true,
+    "areaFlowsExit": true
+}

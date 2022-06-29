@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "Interacting Party A", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Account Inventory", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Verify Identity", "type": "Process", "behavior": "M", "flags": "C", "area": "A1"},
+        {"id": "Interacting Party B", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Interacting Party A", "target": "Verify Identity", "label": "Identity and Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Interacting Party B", "target": "Verify Identity", "label": "Identity and Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Account Inventory", "target": "Verify Identity", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Verify Identity", "target": "Interacting Party A", "label": "Identity Proof", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Verify Identity", "target": "Interacting Party B", "label": "Identity Proof", "type": "Metadata", "flags": "CIA", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "nodes":[
+        {"id": "Primary Data Store", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Verify Backup", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Perform Backup", "type": "Process", "behavior": "M", "flags": "IA", "area": ""},
+        {"id": "Backup Copies", "type": "Data Store", "flags": "IA", "area": "A1"},
+        {"id": "Backup Log", "type": "Data Store", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Primary Data Store", "target": "Perform Backup", "label": "Stored Data", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Perform Backup", "target": "Backup Copies", "label": "Stored Data", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Primary Data Store", "target": "Verify Backup", "label": "Verification Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Backup Copies", "target": "Verify Backup", "label": "Verification Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Perform Backup", "target": "Backup Log", "label": "Backup Info", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Protected Location", "type":"Trust Area"}
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Recovery Plans Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Recover", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Partners", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Managers", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Recovery Plans Inventory", "target": "Recover", "label": "Recovery Plan", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Monitoring and Detection", "target": "Recover", "label": "Incident", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Recover", "target": "Partners", "label": "Recovery Activities", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Recover", "target": "Managers", "label": "Recovery Activities", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

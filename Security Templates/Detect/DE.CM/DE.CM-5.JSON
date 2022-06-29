@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Mobile Device", "type": "Entity", "flags": ""},
+        {"id": "Check For Unauthorized Code", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Mobile Device", "target": "Check For Unauthorized Code", "label": "Mobile Applications",  "type": "Generic", "flags": "I"},
+        {"source": "Software Inventory", "target": "Check For Unauthorized Code", "label": "Authorized Code",  "type": "Metadata", "flags": "CIA"},
+        {"source": "Check For Unauthorized Code", "target": "Monitoring and Detection", "label": "Results", "type": "Metadata", "flags": "CIA"}
+    ]
+}

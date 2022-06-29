@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Vulnerabilty Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Penetration Testing", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Vulnerability Scanner", "type": "Entity", "flags": ""}
+    ], 
+    "links":[
+        {"source": "Threats Inventory", "target": "Penetration Testing", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Penetration Testing", "target": "Vulnerabilty Inventory", "label": "Vulnerabilties", "type": "Metadata", "flags": "CIA"},
+        {"source": "Vulnerabilty Inventory", "target": "Penetration Testing", "label": "Vulnerabilties", "type": "Metadata", "flags": "CIA"},
+        {"source": "Vulnerability Scanner", "target": "Vulnerabilty Inventory", "label": "Vulnerabilties", "type": "Metadata", "flags": "CIA"}
+    ]
+}

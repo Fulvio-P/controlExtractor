@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Data Source", "type": "Entity", "flags": ""},
+        {"id": "Identify and Forward", "type": "Process", "behavior": "M", "flags": "CIA"},
+        {"id": "Data Processing", "type": "Process", "behavior": "M", "flags": "C"},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Data Source", "target": "Identify and Forward", "label": "Process Input", "type": "Generic", "flags": ""},
+        {"source": "Identify and Forward", "target": "Data Processing", "label": "Personal Data Input", "type": "Personal", "flags": "CI"},
+        {"source": "Identify and Forward", "target": "Data Processing", "label": "Generic Data Input", "type": "Generic", "flags": ""},
+        {"source": "Data Processing", "target": "Identify and Forward", "label": "Data Usage Info", "type": "Metadata", "flags":"CIA"},
+        {"source": "Identify and Forward", "target": "Data Inventory", "label": "Personal Data Treatment", "type": "Metadata", "flags": "CIA"}
+    ]
+}

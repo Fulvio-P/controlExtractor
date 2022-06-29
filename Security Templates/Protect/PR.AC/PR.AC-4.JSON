@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Manage Authorizations", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Role Definitions Inventory", "type": "Data Store", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Manage Authorizations", "label": "Data Resources", "type": "Classified", "flags": "C"},
+        {"source": "Software Inventory", "target": "Manage Authorizations", "label": "Software Resources", "type": "Generic", "flags": ""},
+        {"source": "Hardware Inventory", "target": "Manage Authorizations", "label": "Hardware Resources", "type": "Generic", "flags": ""},
+        {"source": "Manage Authorizations", "target": "Role Definitions Inventory", "label": "Authorization Data", "type": "Metadata", "flags": "CIA"},
+        {"source": "Role Definitions Inventory", "target": "Manage Authorizations", "label": "Role Definitions", "type": "Metadata", "flags": "CIA"}
+    ]
+}

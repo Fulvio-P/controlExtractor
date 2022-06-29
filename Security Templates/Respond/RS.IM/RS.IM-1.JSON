@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Respond", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Analyze Effectiveness", "type": "Process", "behavior": "F", "flags": ""}
+    ],
+    "links":[
+        {"source": "Response Plans Inventory", "target": "Respond", "label": "Response Plan", "type": "Metadata", "flags": "CIA"},
+        {"source": "Respond", "target": "Analyze Effectiveness", "label": "Effectiveness Report", "type": "Metadata", "flags": "CIA"},
+        {"source": "Analyze Effectiveness", "target": "Response Plans Inventory", "label": "Lessons Learned and Updates", "type": "Metadata", "flags": "CIA"}
+    ]
+}

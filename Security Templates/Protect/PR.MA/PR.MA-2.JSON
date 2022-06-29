@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Account Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Maintenance Log", "type": "Data Store", "flags": ""},
+        {"id": "Maintainer", "type": "Entity", "flags": ""},
+        {"id": "Check Identity and Action", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Perform Maintenance Action", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Maintainer", "target": "Check Identity and Action", "label": "Maintenance Action", "type": "Generic", "flags": ""},
+        {"source": "Maintainer", "target": "Check Identity and Action", "label": "Identity and Credentials", "type": "Generic", "flags": ""},
+        {"source": "Account Inventory", "target": "Check Identity and Action", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": ""},
+        {"source": "Check Identity and Action", "target": "Maintenance Log", "label": "Maintenance Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Check Identity and Action", "target": "Perform Maintenance Action", "label": "Maintenance Action", "type": "Generic", "flags": ""}
+    ]
+}

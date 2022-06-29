@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Partners Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Develop Security Measures", "type": "Process", "behavior": "J", "flags": ""}
+    ],
+    "links":[
+        {"source": "Partners Inventory", "target": "Develop Security Measures", "label": "Contracts Info", "type": "Generic", "flags": ""},
+        {"source": "Risk Management", "target": "Develop Security Measures", "label": "Objectives", "type": "Metadata", "flags": "CIA"},
+        {"source": "Develop Security Measures", "target": "Risk Management", "label": "Security Measures", "type": "Metadata", "flags": "CIA"}
+    ]
+}

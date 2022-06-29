@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Policies Storage", "type": "Data Store", "flags": ""},
+        {"id": "Define Implement or Revise", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Log Systems", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "Policies Storage", "target": "Define Implement or Revise", "label": "Log Policies", "type": "Generic", "flags": ""},
+        {"source": "Log Systems", "target": "Define Implement or Revise", "label": "Status Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Define Implement or Revise", "target": "Log Systems", "label": "Changes and Updates", "type": "Metadata", "flags": "CIA"}
+    ]
+}

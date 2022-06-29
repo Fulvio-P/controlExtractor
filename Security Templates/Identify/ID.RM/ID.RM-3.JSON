@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Critical Services Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Determine Tolerable Risk", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Critical Services Inventory", "target": "Determine Tolerable Risk", "label": "Security Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Threats Inventory", "target": "Determine Tolerable Risk", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Determine Tolerable Risk", "target": "Risk Management", "label": "Tolerable Risk", "type": "Metadata", "flags": "CIA"}
+    ]
+}

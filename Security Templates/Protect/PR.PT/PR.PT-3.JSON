@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Configurations Baselines", "type": "Data Store", "flags": ""},
+        {"id": "Software Baselines", "type": "Data Store", "flags": ""},
+        {"id": "Install New System", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Configure Authorizations", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Role Definitions Inventory", "type": "Data Store", "flags": ""}
+    ],
+    "links":[
+        {"source": "Configurations Baselines", "target": "Configure Authorizations", "label": "Standard Configurations", "type": "Generic", "flags": ""},
+        {"source": "Software Baselines", "target":"Configure Authorizations", "label": "Standard Software", "type": "Generic", "flags": ""},
+        {"source": "Install New System", "target":"Configure Authorizations", "label": "New System", "type": "Generic", "flags": ""},
+        {"source": "Role Definitions Inventory", "target":"Configure Authorizations", "label": "Roles", "type": "Generic", "flags": ""}
+    ]
+}

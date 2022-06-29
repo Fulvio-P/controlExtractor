@@ -1,0 +1,9 @@
+{
+    "nodes":[
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Personnel", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "Response Plans Inventory", "target": "Personnel", "label": "Role and Response Operations", "type": "Metadata", "flags": "CIA"}
+    ]
+}

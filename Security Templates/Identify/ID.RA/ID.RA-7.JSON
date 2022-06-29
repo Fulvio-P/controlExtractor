@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Evaulate Impact", "type": "Process", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Evaulate Impact", "label": "Personal Data Info", "type": "Generic", "flags": ""},
+        {"source": "Threats Inventory", "target": "Evaulate Impact", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Evaulate Impact", "target": "Threats Inventory", "label": "Impact", "type": "Metadata", "flags": "CIA"}
+    ]
+}

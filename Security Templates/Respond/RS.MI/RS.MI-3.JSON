@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Evaluate Risk", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Mitigate Vulnerability", "type": "Process", "behavior": "J", "flags": ""}
+    ],
+    "links":[
+        {"source": "Vulnerability Inventory", "target": "Evaluate Risk", "label": "Vulnerability Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Threats Inventory", "target": "Evaluate Risk", "label": "Threat Intelligence", "type": "Metadata", "flags": "CIA"},
+        {"source": "Threats Inventory", "target": "Mitigate Vulnerability", "label": "Threat Intelligence", "type": "Metadata", "flags": "CIA"},
+        {"source": "Evaluate Risk", "target": "Vulnerability Inventory", "label": "Accepted Vulnerability", "type": "Metadata", "flags": "CIA"},
+        {"source": "Evaluate Risk", "target": "Mitigate Vulnerability", "label": "Vulnerability Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Mitigate Vulnerability", "target": "Vulnerability Inventory", "label": "Mitigated Vulnerability", "type": "Metadata", "flags": "CIA"}
+    ]
+}

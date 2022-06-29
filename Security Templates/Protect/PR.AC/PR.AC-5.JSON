@@ -1,0 +1,19 @@
+{
+    "nodes":[
+        {"id": "Source", "type": "Entity", "flags": "", "area": "A1"},
+        {"id": "Filter Data Flows", "type": "Process", "behavior": "M", "flags": "IA", "area": ""},
+        {"id": "Verify Session", "type": "Process", "behavior": "M", "flags": "IA", "area": ""},
+        {"id": "Destination", "type": "Entity", "flags": "", "area": "A2"}
+    ],
+    "links":[
+        {"source": "Source", "target": "Filter Data Flows", "label": "Message", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Filter Data Flows", "target": "Verify Session", "label": "Message", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Verify Session", "target": "Destination", "label": "Message", "type": "Generic", "flags": "", "area": "A2"},
+        {"source": "Source", "target": "Filter Data Flows", "label": "Connection Metadata", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Filter Data Flows", "target": "Verify Session", "label": "Connection Metadata", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Source Network", "type":"Generic Area"},
+        {"id": "A2", "name": "Destination Network", "type":"Generic Area"}
+    ]
+}

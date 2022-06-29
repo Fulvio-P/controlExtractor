@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Update Recovery Strategies", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Recovery Plans Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Threats Inventory", "target": "Update Recovery Strategies", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Vulnerability Inventory", "target": "Update Recovery Strategies", "label": "Vulnerability", "type": "Metadata", "flags": "CIA"},
+        {"source": "Incidents Inventory", "target": "Update Recovery Strategies", "label": "Incidents", "type": "Metadata", "flags": "CIA"},
+        {"source": "Business Processes Inventory", "target": "Update Recovery Strategies", "label": "Processes", "type": "Generic", "flags": ""},
+        {"source": "Recovery Plans Inventory", "target": "Update Recovery Strategies", "label": "Recovery Strategies", "type": "Metadata", "flags": "CIA"},
+        {"source": "Update Recovery Strategies", "target": "Recovery Plans Inventory", "label": "Updates", "type": "Metadata", "flags": "CIA"}
+    ]
+}

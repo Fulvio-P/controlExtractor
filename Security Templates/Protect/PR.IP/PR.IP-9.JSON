@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Respond", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Recover", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Recovery Plans Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Respond", "label": "Incident", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Recover", "label": "Incident", "type": "Metadata", "flags": "CIA"},
+        {"source": "Respond", "target": "Recover", "label": "Status", "type": "Metadata", "flags": "CIA"},
+        {"source": "Response Plans Inventory", "target": "Respond", "label": "Response Plan", "type": "Metadata", "flags": "CIA"},
+        {"source": "Recovery Plans Inventory", "target": "Recover", "label": "Recovery Plan", "type": "Metadata", "flags": "CIA"}
+    ]
+}

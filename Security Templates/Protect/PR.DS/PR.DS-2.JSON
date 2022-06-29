@@ -1,0 +1,20 @@
+{
+    "nodes":[
+        {"id": "Sender", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Sign", "type": "Process", "behavior": "F", "flags": "C", "area": ""},
+        {"id": "Encrypt", "type": "Process", "behavior": "F", "flags": "C", "area": ""},
+        {"id": "Conceal Pattern", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Send", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Receiver", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Sender", "target": "Sign", "label": "Clear text message", "type": "Generic", "flags": "C", "area": ""},
+        {"source": "Sign", "target": "Encrypt", "label": "Signed message", "type": "Generic", "flags": "C", "area": ""},
+        {"source": "Encrypt", "target": "Conceal Pattern", "label": "Encrypted message", "type": "Generic", "flags": "", "area": ""},
+        {"source":  "Conceal Pattern", "target": "Send", "label": "Concealed message", "type": "Generic", "flags": "", "area": ""},
+        {"source":  "Send", "target": "Receiver", "label": "Concealed message", "type": "Generic", "flags": "", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

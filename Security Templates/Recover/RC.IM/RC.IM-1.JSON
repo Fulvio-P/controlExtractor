@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Recovery Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Recover", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Analyze Effectiveness", "type": "Process", "behavior": "F", "flags": ""}
+    ],
+    "links":[
+        {"source": "Recovery Plans Inventory", "target": "Recover", "label": "Recovery Plan", "type": "Metadata", "flags": "CIA"},
+        {"source": "Recover", "target": "Analyze Effectiveness", "label": "Effectiveness Report", "type": "Metadata", "flags": "CIA"},
+        {"source": "Analyze Effectiveness", "target": "Recovery Plans Inventory", "label": "Lessons Learned and Updates", "type": "Metadata", "flags": "CIA"}
+    ]
+}

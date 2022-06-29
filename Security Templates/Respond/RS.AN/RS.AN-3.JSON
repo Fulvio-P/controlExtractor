@@ -1,0 +1,11 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Forensics Activities", "type": "Process", "behavior": "F", "flags": ""},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Forensics Activities", "label": "Incident", "type": "Metadata", "flags": "CIA"},
+        {"source": "Forensics Activities", "target": "Incidents Inventory", "label": "Forensic Report", "type": "Metadata", "flags": "CIA"}
+    ]
+}

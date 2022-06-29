@@ -1,0 +1,11 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Personnel", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "Human Resources Inventory", "target": "Monitoring and Detection", "label":"Human Resources Info", "type": "Personal", "flags": "CI"},
+        {"source": "Personnel", "target": "Monitoring and Detection", "label":"Security Behavior", "type": "Generic", "flags": "I"}
+    ]
+}

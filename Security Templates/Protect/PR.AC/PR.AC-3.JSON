@@ -1,0 +1,24 @@
+{
+    "nodes":[
+        {"id": "Remote User", "type": "Entity", "flags": "", "area": "A1"},
+        {"id": "Control Access", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Access Resources", "type": "Process", "behavior": "M", "flags": "", "area": "A2"},
+        {"id": "Account Inventory", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA", "area": ""},
+        {"id": "Access Log", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Resources Inventory", "type": "Data Store", "flags": "", "area": "A2"}
+    ],
+    "links":[
+        {"source": "Remote User", "target": "Control Access", "label": "Identity and Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Control Access", "target": "Access Resources", "label": "Authorization", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Access Resources", "target": "Remote User", "label": "Resources", "type": "Classified", "flags": "C", "area": "A1"},
+        {"source": "Resources Inventory", "target": "Access Resources", "label": "Resources", "type": "Classified", "flags": "C", "area": "A2"},
+        {"source": "Account Inventory", "target": "Control Access", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Human Resources Inventory", "target": "Control Access", "label": "User Role", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Access Resources", "target": "Access Log", "label": "Access Record", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"},
+        {"id": "A2", "name": "Physical Boundaries", "type":"Generic Area"}
+    ]
+}

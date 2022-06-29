@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Configurations Baselines", "type": "Data Store", "flags": ""},
+        {"id": "Software Baselines", "type": "Data Store", "flags": ""},
+        {"id": "Verify Authenticity", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Verify Authenticity", "label": "Data Resources", "type": "Generic", "flags": ""},
+        {"source": "Software Inventory", "target":"Verify Authenticity", "label": "Software Resources", "type": "Generic", "flags": ""},
+        {"source": "Configurations Baselines", "target":"Verify Authenticity", "label": "Standard Configurations", "type": "Generic", "flags": ""},
+        {"source": "Software Baselines", "target":"Verify Authenticity", "label": "Standard Software", "type": "Generic", "flags": ""}
+    ]
+}

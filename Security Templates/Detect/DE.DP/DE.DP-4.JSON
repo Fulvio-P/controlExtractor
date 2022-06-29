@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Incident Response", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Identify Incidents", "type": "Process", "behavior": "C", "flags": ""},
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Events Inventory", "label": "Events", "type": "Metadata", "flags": "CIA"},
+        {"source": "Events Inventory", "target": "Identify Incidents", "label": "Events", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify Incidents", "target": "Incident Response", "label": "Incidents", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify Incidents", "target": "Incidents Inventory", "label": "Incidents", "type": "Metadata", "flags": "CIA"}
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Manage Public Relations", "type": "Process", "behavior": "F", "flags": ""},
+        {"id": "Third Parties", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Manage Public Relations", "label": "Incident Alert", "type": "Metadata", "flags": "CIA"},
+        {"source": "Manage Public Relations", "target": "Third Parties", "label": "Public Statements", "type": "Generic", "flags": ""}
+    ]
+}

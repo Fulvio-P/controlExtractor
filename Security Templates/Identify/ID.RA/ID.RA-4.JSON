@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Identify Impact and Probability", "type": "Process", "behavior": "J", "flags": ""}
+    ],
+    "links": [
+        {"source": "Business Processes Inventory", "target": "Identify Impact and Probability", "label": "Business Info", "type": "Generic", "flags": ""},
+        {"source": "Threats Inventory", "target": "Identify Impact and Probability", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify Impact and Probability", "target": "Threats Inventory", "label": "Impact and Probability", "type": "Metadata", "flags": "CIA"}
+    ]
+}

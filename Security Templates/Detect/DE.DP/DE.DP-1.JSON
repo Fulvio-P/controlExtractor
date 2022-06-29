@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Monitored System", "type": "Entity", "flags": ""},
+        {"id": "Role Definitions Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Monitored System", "target": "Monitoring and Detection", "label": "Status", "type": "Generic", "flags": "IA"},
+        {"source": "Role Definitions Inventory", "target": "Monitoring and Detection", "label": "Roles and Responsabilities", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Events Inventory", "label": "Events", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Events Inventory", "label": "Accountability Info", "type": "Metadata", "flags": "CIA"}
+    ]
+}

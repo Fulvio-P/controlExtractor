@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Inform", "type": "Process", "behavior": "C", "flags": "", "area": ""},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Authorities", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Data Subjects", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Incidents Inventory", "target": "Inform", "label": "Violation Incident", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Inform", "target": "Authorities", "label": "Violation Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Inform", "target": "Data Subjects", "label": "Violation Info", "type": "Metadata", "flags": "CIA", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

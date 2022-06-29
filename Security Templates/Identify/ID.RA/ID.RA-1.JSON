@@ -1,0 +1,28 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Find Data Vulnerabilities", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Find Software Vulnerabilities", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Find Hardware Vulnerabilities", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Find Human Vulnerabilities", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Open Vulnerability Repositories", "type": "Data Store", "flags": ""},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Find Data Vulnerabilities", "label": "Data Resources", "type": "Classified", "flags": "C"},
+        {"source": "Software Inventory", "target": "Find Software Vulnerabilities", "label": "Software Resources", "type": "Generic", "flags": ""},
+        {"source": "Human Resources Inventory", "target": "Find Human Vulnerabilities", "label": "Human Resources Info", "type": "Personal", "flags": "CI"},
+        {"source": "Hardware Inventory", "target": "Find Hardware Vulnerabilities", "label": "Hardware Resources", "type": "Generic", "flags": ""},
+        {"source": "Open Vulnerability Repositories", "target": "Find Data Vulnerabilities", "label": "Vulnerability Info", "type": "Generic", "flags": ""},
+        {"source": "Open Vulnerability Repositories", "target": "Find Hardware Vulnerabilities", "label": "Vulnerability Info", "type": "Generic", "flags": ""},
+        {"source": "Open Vulnerability Repositories", "target": "Find Software Vulnerabilities", "label": "Vulnerability Info", "type": "Generic", "flags": ""},
+        {"source": "Open Vulnerability Repositories", "target": "Find Human Vulnerabilities", "label": "Vulnerability Info", "type": "Generic", "flags": ""},
+        {"source": "Find Data Vulnerabilities", "target": "Vulnerability Inventory", "label": "Vulnerabilities", "type": "Metadata", "flags": "CIA"},
+        {"source": "Find Software Vulnerabilities", "target": "Vulnerability Inventory", "label": "Vulnerabilities", "type": "Metadata", "flags": "CIA"},
+        {"source": "Find Hardware Vulnerabilities", "target": "Vulnerability Inventory", "label": "Vulnerabilities", "type": "Metadata", "flags": "CIA"},
+        {"source": "Find Human Vulnerabilities", "target": "Vulnerability Inventory", "label": "Vulnerabilities", "type": "Metadata", "flags": "CIA"}
+    ]
+}

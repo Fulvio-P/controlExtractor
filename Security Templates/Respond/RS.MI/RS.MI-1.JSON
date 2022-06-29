@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Respond", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Identify Impact", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Incidents Inventory", "label": "Incident", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Respond", "label": "Incident Alert", "type": "Metadata", "flags": "CIA"},
+        {"source": "Response Plans Inventory", "target": "Respond", "label": "Response Plan", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Identify Impact", "label": "Incident", "type": "Metadata", "flags": "CIA"},
+        {"source": "Respond", "target": "Identify Impact", "label": "Impact Reduction", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify Impact", "target": "Incidents Inventory", "label": "Impact", "type": "Metadata", "flags": "CIA"}
+    ]
+}

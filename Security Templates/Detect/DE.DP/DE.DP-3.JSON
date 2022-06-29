@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Test Results Log", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "Make Test Input", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Monitoring Process", "type": "Process", "behavior": "J", "flags": "", "area": "A1"},
+        {"id": "Evaluate Output", "type": "Process", "behavior": "M", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Test Results Log", "target": "Make Test Input", "label": "Test Results", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Make Test Input", "target": "Monitoring Process", "label": "Test Input", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Monitoring Process", "target": "Evaluate Output", "label": "Test Output", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Evaluate Output", "target": "Test Results Log", "label": "Test Results", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Testing Environment", "type":"Trust Area"}
+    ]
+}

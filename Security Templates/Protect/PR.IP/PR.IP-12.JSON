@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Risk Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Assign Priority", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Apply Mitigation", "type": "Process", "behavior": "F", "flags": ""}
+    ],
+    "links":[
+        {"source": "Risk Inventory", "target": "Assign Priority", "label": "Risk", "type": "Metadata", "flags": "CIA"},
+        {"source": "Vulnerability Inventory", "target": "Assign Priority", "label": "Vulnerability", "type": "Metadata", "flags": "CIA"},
+        {"source": "Assign Priority", "target": "Apply Mitigation", "label": "Prioritized Vulnerability", "type": "Metadata", "flags": "CIA"},
+        {"source": "Apply Mitigation", "target": "Vulnerability Inventory", "label": "Vulnerability Update", "type": "Metadata", "flags": "CIA"}
+    ]
+}

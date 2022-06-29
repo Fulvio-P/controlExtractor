@@ -1,0 +1,21 @@
+{
+    "nodes":[
+        {"id": "Identify and Forward", "type": "Process", "behavior": "M", "flags": "IA"},
+        {"id": "Identify and Forward Specialized", "type": "Process", "behavior": "M", "flags": "CIA"},
+        {"id": "Sender", "type": "Entity", "flags": ""},
+        {"id": "Receiver", "type": "Entity", "flags": ""},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Sender", "target": "Identify and Forward", "label": "Generic Data Flow", "type": "Generic", "flags": ""},
+        {"source": "Sender", "target": "Identify and Forward Specialized", "label": "Personal Data Flow", "type": "Personal", "flags": "CI"},
+        {"source": "Sender", "target": "Identify and Forward Specialized", "label": "Secuirty Metadata Flow", "type": "Metadata", "flags": "CIA"},
+        {"source": "Sender", "target": "Identify and Forward Specialized", "label": "Classified Data Flow", "type": "Classified", "flags": "C"},
+        {"source": "Identify and Forward", "target": "Receiver" , "label": "Generic Data Flow", "type": "Generic", "flags": ""},
+        {"source": "Identify and Forward Specialized", "target": "Receiver" , "label": "Personal Data Flow", "type": "Personal", "flags": "CI"},
+        {"source": "Identify and Forward Specialized", "target": "Receiver", "label": "Secuirty Metadata Flow", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify and Forward Specialized", "target": "Receiver", "label": "Classified Data Flow", "type": "Classified", "flags": "C"},
+        {"source": "Identify and Forward", "target": "Data Inventory", "label": "Data Flow Metadata", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify and Forward Specialized", "target": "Data Inventory", "label": "Data Flow Metadata", "type": "Metadata", "flags": "CIA"}
+    ]
+}

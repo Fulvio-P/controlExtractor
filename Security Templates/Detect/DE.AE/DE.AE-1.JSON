@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Network Sensors", "type": "Entity", "flags": ""},
+        {"id": "Identify Typical Behavior", "type": "Process", "behavior": "F", "flags": ""},
+        {"id": "Define Baselines", "type": "Process", "behavior": "F", "flags": ""},
+        {"id": "Detect Anomalies", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Network Activities Baselines", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Network Sensors", "target": "Identify Typical Behavior", "label": "Network Traffic", "type": "Generic", "flags": ""},
+        {"source": "Network Sensors", "target": "Detect Anomalies", "label": "Network Traffic", "type": "Generic", "flags": ""},
+        {"source": "Identify Typical Behavior", "target": "Define Baselines", "label": "Behavior", "type": "Metadata", "flags": "CIA"},
+        {"source": "Define Baselines", "target": "Network Activities Baselines", "label": "Baselines", "type": "Metadata", "flags": "CIA"},
+        {"source": "Network Activities Baselines", "target": "Detect Anomalies", "label": "Baselines", "type": "Metadata", "flags": "CIA"}
+    ]
+}

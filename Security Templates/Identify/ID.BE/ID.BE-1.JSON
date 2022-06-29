@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Environment", "type": "Entity", "flags": ""},
+        {"id": "Suppliers Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Clients Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Define Organization Role", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Environment", "target": "Define Organization Role", "label": "Environment Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Suppliers Inventory", "target":"Define Organization Role", "label": "Suppliers Info", "type": "Generic", "flags": ""},
+        {"source": "Clients Inventory", "target": "Define Organization Role", "label":"Clients Info", "type": "Generic", "flags": ""},
+        {"source": "Define Organization Role", "target": "Risk Management", "label": "Organization Role", "type": "Metadata", "flags": "CIA"}
+    ]
+}

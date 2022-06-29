@@ -1,0 +1,9 @@
+{
+    "nodes":[
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Analyze", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Monitoring and Detection", "target": "Analize", "label": "Notification", "type": "Generic", "flags": ""}
+    ]
+}

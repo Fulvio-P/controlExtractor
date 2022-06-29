@@ -1,0 +1,11 @@
+{
+    "nodes":[
+        {"id": "Policies Storage", "type": "Data Store", "flags": ""},
+        {"id": "Inform About Data Treatment", "type": "Process", "behavior": "F", "flags": ""},
+        {"id": "Data Subject", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "Policies Storage", "target": "Inform About Data Treatment", "label": "Data Treatment Policy", "type": "Generic", "flags": ""},
+        {"source": "Inform About Data Treatment", "target": "Data Subject", "label": "Data Treatment Policy", "type": "Generic", "flags": ""}
+    ]
+}

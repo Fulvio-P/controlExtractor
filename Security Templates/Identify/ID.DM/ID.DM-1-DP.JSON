@@ -1,0 +1,10 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Define Data Lifecycle", "type": "Process", "behavior": "F", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Define Data Lifecycle", "label": "Data Resources Info", "type": "Generic", "flags": ""},
+        {"source": "Define Data Lifecycle", "target": "Data Inventory", "label": "Lifecycle", "type": "Generic", "flags": ""}
+    ]
+}

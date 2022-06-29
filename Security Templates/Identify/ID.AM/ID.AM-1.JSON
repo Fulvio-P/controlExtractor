@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "User", "type": "Entity", "flags": ""},
+        {"id": "Check Authorization", "type": "Process", "behavior": "F", "flags": "I"},
+        {"id": "Install Device", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Update Inventory", "type": "Process", "behavior": "F", "flags": "I"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "I,A"},
+        {"id": "Other Systems", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "User", "target": "Check Authorization", "label": "Device", "type": "Generic", "flags": "I"},
+        {"source": "User", "target": "Install Device", "label": "Accountability Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Check Authorization", "target":"Install Device", "label": "Device", "type": "Generic", "flags": "I"},
+        {"source": "Install Device", "target": "Update Inventory", "label": "Installation Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Update Inventory", "target": "Hardware Inventory", "label": "Installation Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Other Systems", "target": "Hardware Inventory", "label": "Other Systems' Info", "type": "Metadata", "flags": "CIA"}
+    ]
+}

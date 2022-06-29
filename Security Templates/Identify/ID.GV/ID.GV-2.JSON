@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Partners", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA", "area": ""},
+        {"id": "Coordinate and allign roles", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Role Definitions Inventory", "type": "Data Store", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Partners", "target": "Coordinate and allign roles", "label": "Role and Responsabilities", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Human Resources Inventory", "target": "Coordinate and allign roles", "label": "Role and Responsabilities", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Role Definitions Inventory", "target": "Coordinate and allign roles", "label": "Role Definitions", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Coordinate and allign roles", "target": "Role Definitions Inventory", "label":"Updated Roles", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

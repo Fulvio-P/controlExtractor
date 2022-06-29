@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Check For Malicious Code", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Software Inventory", "target": "Check For Malicious Code", "label": "Software", "type": "Generic", "flags": "I"},
+        {"source": "Threats Inventory", "target": "Check For Malicious Code", "label": "Threats", "type": "Metadata", "flags": "CIA"},
+        {"source": "Vulnerability Inventory", "target": "Check For Malicious Code", "label": "Vulnerability", "type": "Metadata", "flags": "CIA"},
+        {"source": "Check For Malicious Code", "target": "Monitoring and Detection", "label": "Results", "type": "Metadata", "flags": "CIA"}
+    ]
+}

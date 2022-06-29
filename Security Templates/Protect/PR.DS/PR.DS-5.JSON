@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Account Inventory", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "User", "type": "Entity", "flags": "", "area": "A1"},
+        {"id": "Control Access", "type": "Process", "behavior": "J", "flags": "", "area": ""},
+        {"id": "Restricted Process", "type": "Process", "behavior": "M", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "User", "target": "Control Access", "label": "Request", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "User", "target": "Control Access", "label": "Identity and Credentials", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Account Inventory", "target": "Control Access", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Control Access", "target": "Restricted Process", "label": "Request", "type": "Generic", "flags": "", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

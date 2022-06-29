@@ -1,0 +1,28 @@
+{
+    "nodes":[
+        {"id": "Manage Incident", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Recovery Plans Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Plan Response", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Plan Recovery", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Verify Response", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Verify Recovery", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Partners and Suppliers", "type": "Entity", "flags": "", "area": "A1"}
+    ],
+    "links":[
+        {"source": "Manage Incident", "target": "Verify Response", "label": "Incident Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Manage Incident", "target": "Verify Recovery", "label": "Incident Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Manage Incident", "target": "Partners and Suppliers", "label": "Incident Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Partners and Suppliers", "target": "Plan Response", "label": "Response Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Partners and Suppliers", "target": "Verify Response", "label": "Response Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Partners and Suppliers", "target": "Plan Recovery", "label": "Recovery Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Partners and Suppliers", "target": "Verify Recovery", "label": "Recovery Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Plan Response", "target": "Response Plans Inventory", "label": "Response Plans", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Plan Recovery", "target": "Recovery Plans Inventory", "label": "Recovery Plans", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Response Plans Inventory", "target": "Verify Response", "label": "Response Plans", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Recovery Plans Inventory", "target": "Verify Recovery", "label": "Recovery Plans", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

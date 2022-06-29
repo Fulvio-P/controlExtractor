@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Cybersecurity Regulations", "type": "Data Store", "flags": ""},
+        {"id": "Privacy Protection Regulations", "type": "Data Store", "flags": ""},
+        {"id": "Extract Legal Requirements", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Cybersecurity Regulations", "target": "Extract Legal Requirements", "label": "Laws and Guidelines", "type": "Generic", "flags": ""},
+        {"source": "Privacy Protection Regulations", "target": "Extract Legal Requirements", "label": "Laws and Guidelines", "type": "Generic", "flags": ""},
+        {"source": "Extract Legal Requirements", "target": "Risk Management", "label": "Requierements", "type": "Generic", "flags": ""}
+    ]
+}

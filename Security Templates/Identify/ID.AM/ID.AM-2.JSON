@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "User", "type": "Entity", "flags": ""},
+        {"id": "Check Authorization", "type": "Process", "behavior": "F", "flags": "I"},
+        {"id": "Install Software", "type": "Process", "behavior": "J", "flags": ""},
+        {"id": "Update Inventory", "type": "Process", "behavior": "F", "flags": "I"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "I,A"},
+        {"id": "Other Systems", "type": "Entity", "flags": ""}
+    ],
+    "links":[
+        {"source": "User", "target": "Check Authorization", "label": "Application", "type": "Generic", "flags": "I"},
+        {"source": "User", "target": "Install Software", "label": "Accountability Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Check Authorization", "target":"Install Software", "label": "Application", "type": "Generic", "flags": "I"},
+        {"source": "Install Software", "target": "Update Inventory", "label": "Installation Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Update Inventory", "target": "Software Inventory", "label": "Installation Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Other Systems", "target": "Software Inventory", "label": "Other Systems' Info", "type": "Metadata", "flags": "CIA"}
+    ]
+}

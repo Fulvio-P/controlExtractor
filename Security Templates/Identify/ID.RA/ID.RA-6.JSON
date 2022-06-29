@@ -1,0 +1,14 @@
+{
+    "nodes":[
+        {"id": "Identify Responses", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Risk Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Prioritize Responses", "type": "Process", "behavior": "J", "flags": ""}
+    ],
+    "links":[
+        {"source": "Identify Responses", "target": "Response Plans Inventory", "label": "Responses", "type": "Metadata", "flags": "CIA"},
+        {"source": "Risk Inventory", "target": "Prioritize Responses", "label": "Risk", "type": "Metadata", "flags": "CIA"},
+        {"source": "Response Plans Inventory", "target": "Prioritize Responses", "label": "Responses", "type": "Metadata", "flags": "CIA"},
+        {"source": "Prioritize Responses", "target": "Response Plans Inventory", "label": "Priority",  "type": "Metadata", "flags": "CIA"}
+    ]
+}

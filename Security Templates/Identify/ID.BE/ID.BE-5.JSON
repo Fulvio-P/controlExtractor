@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Critical Services Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Identify Operation States", "type": "Process", "behavior": "J", "flags": "C"},
+        {"id": "Identify Resilience Requirements", "type": "Process", "behavior": "F", "flags": "C"},
+        {"id": "Risk Management", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Critical Services Inventory", "target": "Identify Operation States", "label": "Security Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Critical Services Inventory", "target": "Identify Operation States", "label": "Services Info", "type": "Generic", "flags": ""},
+        {"source": "Business Processes Inventory", "target": "Identify Operation States", "label": "Processes", "type": "Generic", "flags": ""},
+        {"source": "Identify Operation States", "target": "Identify Resilience Requirements", "label": "States", "type": "Metadata", "flags": "CIA"},
+        {"source": "Identify Resilience Requirements", "target": "Identify Resilience Requirements", "label": "Requirements", "type": "Metadata", "flags": "CIA"}
+    ]
+}

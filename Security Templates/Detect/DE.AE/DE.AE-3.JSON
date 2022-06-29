@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Network Intrusion Detection", "type": "Process", "behavior": "M", "flags": "A"},
+        {"id": "Malware Detection", "type": "Process", "behavior": "M", "flags": "A"},
+        {"id": "Host Intrusion Detection", "type": "Process", "behavior": "M", "flags": "A"},
+        {"id": "Collect and Correlate", "type": "Process", "behavior": "M", "flags": "CIA"},
+        {"id": "User", "type": "Entity", "flags": ""},
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Network Intrusion Detection", "target": "Collect and Correlate", "label": "Alert", "type": "Generic", "flags": "IA"},
+        {"source": "Malware Detection", "target": "Collect and Correlate", "label": "Alert", "type": "Generic", "flags": "IA"},
+        {"source": "Host Intrusion Detection", "target": "Collect and Correlate", "label": "Alert", "type": "Generic", "flags": "IA"},
+        {"source": "User", "target": "Collect and Correlate", "label": "Feedback", "type": "Generic", "flags": "IA"},
+        {"source": "Collect and Correlate", "target": "Events Inventory", "label": "Security Event", "type": "Metadata", "flags": "CIA"}
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "nodes":[
+        {"id": "Service Providers", "type": "Entity", "flags": "", "area": "A1"},
+        {"id": "Monitor Activities", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Define Baselines", "type": "Process", "behavior": "F", "flags": "", "area": ""},
+        {"id": "Detect Cybersecurity Events", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Service Providers Baselines", "type": "Data Store", "flags": "CIA", "area": ""}
+    ],
+    "links":[
+        {"source": "Service Providers", "target": "Monitor Activities", "label": "Activities", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Service Providers", "target": "Detect Cybersecurity Events", "label": "Activities", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Monitor Activities", "target": "Define Baselines", "label": "Typical Activities", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Define Baselines", "target": "Service Providers Baselines", "label": "Baselines", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Service Providers Baselines", "target": "Detect Cybersecurity Events", "label": "Baselines", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Detect Cybersecurity Events", "target": "Service Providers", "label": "Detection Alert", "type": "Metadata", "flags": "CIA", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

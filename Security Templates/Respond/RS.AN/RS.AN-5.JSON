@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "Partners", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Security Researchers", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Receive Vulnerability Info", "type": "Process", "behavior": "J", "flags": "", "area": ""},
+        {"id": "Vulnerability Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Analyze and Respond", "type": "Process", "behavior": "M", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Partners", "target": "Receive Vulnerability Info", "label": "Vulnerability Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Security Researchers", "target": "Receive Vulnerability Info", "label": "Vulnerability Info", "type": "Metadata", "flags": "CIA", "area": "A1"},
+        {"source": "Receive Vulnerability Info", "target": "Vulnerability Inventory", "label": "Vulnerability Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Vulnerability Inventory", "target": "Analyze and Respond", "label": "Vulnerability Info", "type": "Metadata", "flags": "CIA", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

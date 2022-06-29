@@ -1,0 +1,15 @@
+{
+    "nodes":[
+        {"id": "Internal Entity", "type": "Entity", "flags": ""},
+        {"id": "Identify External System", "type": "Process", "behavior": "M", "flags": "IA"},
+        {"id": "External System", "type": "Entity", "flags": ""},
+        {"id":"External System Inventory", "type": "Data Store", "flags": "IA"}
+    ],
+    "links":[
+        {"source": "Internal Entity", "target": "Identify External System", "label": "Outbound data", "type": "Generic", "flags": ""},
+        {"source": "Identify External System", "target": "Internal Entity", "label": "Inbound data", "type": "Generic", "flags": ""},
+        {"source": "Identify External System", "target": "External System", "label": "Outbound data", "type": "Generic", "flags": ""},
+        {"source": "External System", "target": "Identify External System", "label": "Inbound data", "type": "Generic", "flags": ""},
+        {"source":"Identify External System", "target": "External System Inventory", "label": "External System Metadata", "type": "Metadata", "flags": "CIA"}
+    ]
+}

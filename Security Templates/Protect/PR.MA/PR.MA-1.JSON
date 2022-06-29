@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Maintenance Log", "type": "Data Store", "flags": ""},
+        {"id": "Maintainer", "type": "Entity", "flags": ""},
+        {"id": "Check Tools and Action", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Perform Maintenance Action", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Maintainer", "target": "Check Tools and Action", "label": "Maintenance Action", "type": "Generic", "flags": ""},
+        {"source": "Maintainer", "target": "Check Tools and Action", "label": "Tools Info", "type": "Generic", "flags": ""},
+        {"source": "Software Inventory", "target": "Check Tools and Action", "label": "Authorized Tools", "type": "Generic", "flags": ""},
+        {"source": "Hardware Inventory", "target": "Check Tools and Action", "label": "Authorized Tools", "type": "Generic", "flags": ""},
+        {"source": "Check Tools and Action", "target": "Maintenance Log", "label": "Maintenance Action Info", "type": "Metadata", "flags": "CIA"},
+        {"source": "Check Tools and Action", "target": "Perform Maintenance Action", "label": "Maintenance Action", "type": "Generic", "flags": ""}
+    ]
+}

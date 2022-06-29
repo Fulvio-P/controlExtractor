@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Incidents Inventory", "type": "Data Store", "flags": "CIA", "area": ""},
+        {"id": "Share", "type": "Process", "behavior": "J", "flags": "", "area": ""},
+        {"id": "Partners", "type": "Entity", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "Response Plans Inventory", "target": "Share", "label": "Sharing rules", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Incidents Inventory", "target": "Share", "label": "Incident Info", "type": "Metadata", "flags": "CIA", "area": ""},
+        {"source": "Share", "target": "Partners", "label": "Incident Info", "type": "Metadata", "flags": "CIA", "area": "A1"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

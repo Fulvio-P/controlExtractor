@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Data Subject", "type": "Entity", "flags": "", "area": "A1"},
+        {"id": "Collect Personal Data", "type": "Process", "behavior": "J", "flags": "CIA", "area": ""},
+        {"id": "Stop Collecting Data", "type": "Process", "behavior": "M", "flags": "", "area": ""},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA", "area": ""}
+    ],
+    "links":[
+        {"source": "Data Subject", "target": "Collect Personal Data", "label": "Consent", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Data Subject", "target": "Collect Personal Data", "label": "Personal Data", "type": "Personal", "flags": "CI", "area": "A1"},
+        {"source": "Data Subject", "target": "Stop Collecting Data", "label": "Revoke Consent", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Collect Personal Data", "target": "Data Inventory", "label": "Personal Data", "type": "Personal", "flags": "CI", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Trusted Path", "type":"Trust Area"}
+    ]
+}

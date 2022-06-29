@@ -1,0 +1,20 @@
+{
+    "nodes":[
+        {"id": "Account Inventory", "type": "Data Store", "flags": "", "area": ""},
+        {"id": "User", "type": "Entity", "flags": "", "area": ""},
+        {"id": "Filter Requests", "type": "Process", "behavior": "J", "flags": "", "area": ""},
+        {"id": "Data Store", "type": "Data Store", "flags": "CIA", "area": "A1"},
+        {"id": "Filter Results", "type": "Process", "behavior": "F", "flags": "", "area": ""}
+    ],
+    "links":[
+        {"source": "User", "target": "Filter Requests", "label": "Request", "type": "Generic", "flags": "", "area": ""},
+        {"source": "User", "target": "Filter Requests", "label": "Identity and Credentials", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Account Inventory", "target": "Filter Requests", "label": "Identity and Hashed Credentials", "type": "Generic", "flags": "", "area": ""},
+        {"source": "Filter Requests", "target": "Data Store", "label": "Request", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Data Store", "target": "Filter Results", "label": "Results", "type": "Generic", "flags": "", "area": "A1"},
+        {"source": "Filter Results", "target": "User", "label": "Results", "type": "Generic", "flags": "", "area": ""}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Protected Location", "type":"Trust Area"}
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Environment", "type": "Entity", "flags": ""},
+        {"id": "Partners Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Evaluate", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Environment", "target": "Evaluate", "label": "Observed Behavior", "type": "Generic", "flags": ""},
+        {"source": "Partners Inventory", "target": "Evaluate", "label": "Suppliers and Partners", "type": "Generic", "flags": ""},
+        {"source": "Partners Inventory", "target": "Evaluate", "label": "Contract Info", "type": "Generic", "flags": ""},
+        {"source": "Evaluate", "target": "Partners Inventory", "label": "Evaluation", "type": "Metadata", "flags": "CIA"}
+    ]
+}

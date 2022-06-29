@@ -1,0 +1,21 @@
+{
+    "nodes":[
+        {"id": "Assign Priority", "type": "Process", "behavior": "C", "flags": "I"},
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Evaluate Classification", "type": "Process", "behavior": "M", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Evaluate Classification", "label": "Data Resources", "type": "Classified", "flags": "C"},
+        {"source": "Software Inventory", "target": "Evaluate Classification", "label": "Software Resources", "type": "Generic", "flags": ""},
+        {"source": "Human Resources Inventory", "target": "Evaluate Classification", "label": "Human Resources Info", "type": "Personal", "flags": "CI"},
+        {"source": "Hardware Inventory", "target":"Evaluate Classification", "label": "Hardware Resources", "type": "Generic", "flags": ""},
+        {"source": "Evaluate Classification", "target": "Assign Priority", "label": "Evaluation Metadata", "type": "Metadata", "flags": "CIA"},
+        {"source": "Assign Priority", "target": "Data Inventory", "label": "Priority", "type": "Metadata", "flags": "CIA"},
+        {"source": "Assign Priority", "target": "Software Inventory", "label": "Priority", "type": "Metadata", "flags": "CIA"},
+        {"source": "Assign Priority", "target": "Human Resources Inventory", "label": "Priority", "type": "Metadata", "flags": "CIA"},
+        {"source": "Assign Priority", "target": "Hardware Inventory", "label": "Priority", "type": "Metadata", "flags": "CIA"}
+    ]
+}

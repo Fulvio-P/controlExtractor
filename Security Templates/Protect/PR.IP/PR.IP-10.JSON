@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Periodic Verification", "type": "Process", "behavior": "M", "flags": "C"},
+        {"id": "Response Plans Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Recovery Plans Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Response Plans Inventory", "target": "Periodic Verification", "label": "Response Plan", "type": "Metadata", "flags": "CIA"},
+        {"source": "Recovery Plans Inventory", "target": "Periodic Verification", "label": "Recovery Plan", "type": "Metadata", "flags": "CIA"},
+        {"source": "Periodic Verification", "target": "Response Plans Inventory", "label": "Updates", "type": "Metadata", "flags": "CIA"},
+        {"source": "Periodic Verification", "target": "Recovery Plans Inventory", "label": "Updates", "type": "Metadata", "flags": "CIA"}
+    ]
+}

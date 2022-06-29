@@ -1,0 +1,13 @@
+{
+    "nodes":[
+        {"id": "Prototyping and testing", "type": "Process", "behavior": "M", "flags": "", "area": "A1"},
+        {"id": "Normal Operations", "type": "Process", "behavior": "M", "flags": "A", "area": "A2"}
+    ],
+    "links":[
+        {"source": "Prototyping and testing", "target": "Normal Operations", "label": "Take to production", "type": "Generic", "flags": "", "area": "A1A2"}
+    ],
+    "areas":[
+        {"id": "A1", "name": "Development environment", "type":"Trust Area"},
+        {"id": "A2", "name": "Production environment", "type":"Generic Area"}
+    ]
+}

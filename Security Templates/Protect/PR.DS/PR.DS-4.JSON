@@ -1,0 +1,16 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Business Processes Inventory", "type": "Data Store", "flags": ""},
+        {"id": "Assign Resources", "type": "Process", "behavior": "J", "flags": ""}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Assign Resources", "label": "Data Resources", "type": "Generic", "flags": ""},
+        {"source": "Software Inventory", "target": "Assign Resources", "label": "Software Resources", "type": "Generic", "flags": ""},
+        {"source": "Hardware Inventory", "target": "Assign Resources", "label": "Hardware Resources", "type": "Generic", "flags": ""},
+        {"source": "Business Processes Inventory", "target": "Assign Resources", "label": "Processes Info", "type": "Generic", "flags": ""},
+        {"source": "Assign Resources", "target": "Business Processes Inventory", "label": "Assigned Resources", "type": "Metadata", "flags": "CIA"}
+    ]
+}

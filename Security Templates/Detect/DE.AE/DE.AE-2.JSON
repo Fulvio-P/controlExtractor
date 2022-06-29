@@ -1,0 +1,12 @@
+{
+    "nodes":[
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Threats Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Analyze Event", "type": "Process", "behavior": "J", "flags": "C"}
+    ],
+    "links":[
+        {"source": "Events Inventory", "target": "Analyze Event", "label": "Security Event", "type": "Metadata", "flags": "CIA"},
+        {"source": "Threats Inventory", "target": "Analyze Event", "label": "Old Intelligence", "type": "Metadata", "flags": "CIA"},
+        {"source": "Analyze Event", "target": "Threats Inventory", "label": "New Intelligence", "type": "Metadata", "flags": "CIA"}
+    ]
+}

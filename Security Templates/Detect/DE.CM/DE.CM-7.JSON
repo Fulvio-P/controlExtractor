@@ -1,0 +1,17 @@
+{
+    "nodes":[
+        {"id": "Data Inventory", "type": "Data Store", "flags": "CIA"},
+        {"id": "Software Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Human Resources Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Hardware Inventory", "type": "Data Store", "flags": "IA"},
+        {"id": "Monitoring and Detection", "type": "Process", "behavior": "M", "flags": ""},
+        {"id": "Events Inventory", "type": "Data Store", "flags": "CIA"}
+    ],
+    "links":[
+        {"source": "Data Inventory", "target": "Monitoring and Detection", "label": "Authorized Connections", "type": "Metadata", "flags": "CIA"},
+        {"source": "Software Inventory", "target": "Monitoring and Detection", "label": "Authorized Software", "type": "Metadata", "flags": "CIA"},
+        {"source": "Human Resources Inventory", "target": "Monitoring and Detection", "label": "Authorized Personnel", "type": "Metadata", "flags": "CIA"},
+        {"source": "Hardware Inventory", "target": "Monitoring and Detection", "label": "Authorized Hardware", "type": "Metadata", "flags": "CIA"},
+        {"source": "Monitoring and Detection", "target": "Events Inventory", "label": "Anomaly Alert", "type": "Metadata", "flags": "CIA"}
+    ]
+}
