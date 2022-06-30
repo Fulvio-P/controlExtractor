@@ -3,8 +3,8 @@ Control extractor is tool for automatic control elicitation for the Italian Cybe
 
 ## Dependencies
 Control extractor needs the following packages to works:
-- openpyxl
-- natsort
+- openpyxl: https://pypi.org/project/openpyxl/
+- natsort: https://pypi.org/project/natsort/
 
 ## Usage
 
