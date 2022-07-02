@@ -1,6 +1,6 @@
 # Governance Data Flow Diagrams for the Italian National Framework for Cybersecurity and Data Protection
 
-This repository contains everything all the material needed to support the Italian National Framework for Cybersecurity and Data Protection with Governance Data Flow Diagrams. For more details plese refer to **work-in-progress**.
+This repository contains all the material needed to support the Italian National Framework for Cybersecurity and Data Protection with Governance Data Flow Diagrams. For more details plese refer to **work-in-progress**.
 
 **Table of contents:**
 - [Governance Data Flow Diagrams for the Italian National Framework for Cybersecurity and Data Protection](#governance-data-flow-diagrams-for-the-italian-national-framework-for-cybersecurity-and-data-protection)
@@ -69,7 +69,7 @@ python controlExtractor.py Security-Templates-JSON output.xlsx
 
 **Additional options**
 
-Run the tool with the *-n* flag to generate controls withour IDs (useful for detecting duplicates).
+Run the tool with the *-n* flag to generate controls without IDs (useful for detecting duplicates).
 
 `
 python controlExtractor.py <security_templates_path> <output_xlsx_path> -n
