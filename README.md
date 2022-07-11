@@ -1,6 +1,6 @@
 # Governance Data Flow Diagrams for the Italian National Framework for Cybersecurity and Data Protection
 
-This repository contains all the material needed to support the Italian National Framework for Cybersecurity and Data Protection with Governance Data Flow Diagrams. For more details plese refer to **work-in-progress**.
+This repository contains all the material needed to support the Italian National Framework for Cybersecurity and Data Protection with Governance Data Flow Diagrams. For more details plese refer to the full [thesis](Mignano_Fulvio_Pio_Thesis.pdf).
 
 **Table of contents:**
 - [Governance Data Flow Diagrams for the Italian National Framework for Cybersecurity and Data Protection](#governance-data-flow-diagrams-for-the-italian-national-framework-for-cybersecurity-and-data-protection)
